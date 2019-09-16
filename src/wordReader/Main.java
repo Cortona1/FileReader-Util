@@ -2,8 +2,6 @@ package wordReader;
 
 import java.io.File;
 
-
-
 public class Main {
 
     public static void main(String[] args) throws Exception {
@@ -11,5 +9,6 @@ public class Main {
 
         TextReader test = new TextReader(file);
         System.out.println(test.wordsThatContainBlue());
+        System.out.println(test.palindromes());
     }
 }

@@ -30,4 +30,20 @@ public List<String> wordsThatContainBlue(){
     }
     return wordsWithBlue;
 }
+
+public List<String> palindromes() {
+    List palindromes = new ArrayList<String>();
+
+    for (String string : this.textList) {
+        String reverse = "";
+        String helper = string.toLowerCase();
+        for (int i = string.length()-1; i >= 0; i--) {
+            reverse += string.toLowerCase().charAt(i);
+        }
+        if (helper.equals(reverse)) {
+            palindromes.add(string);
+        }
+    }
+    return palindromes;
+}
 }
