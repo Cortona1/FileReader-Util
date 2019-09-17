@@ -10,5 +10,6 @@ public class Main {
         TextReader test = new TextReader(file);
         System.out.println(test.wordsThatContainBlue());
         System.out.println(test.palindromes());
+        System.out.println(test.wordsContainingAllVowels());
     }
 }

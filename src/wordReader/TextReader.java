@@ -9,10 +9,12 @@ import java.util.Scanner;
 public class TextReader {
 private List<String> textList;
 private Scanner reader;
+private String vowels;
 
 public TextReader(File file) throws Exception {
     this.reader = new Scanner(file);
     this.textList = new ArrayList<String>();
+    this.vowels = "aeiou";
 
     // We will take the text file read line by line and add to the list
     while(this.reader.hasNextLine()) {
@@ -46,4 +48,24 @@ public List<String> palindromes() {
     }
     return palindromes;
 }
+
+    public List<String> wordsContainingAllVowels() {
+        List wordsWhichContainAllVowels = new ArrayList<String>();
+
+        for (String string : this.textList) {
+            if (containsAllVowels(string)) {
+                wordsWhichContainAllVowels.add(string);
+            }
+        }
+        return wordsWhichContainAllVowels;
+    }
+
+    private boolean containsAllVowels(String word) {
+        for (char vowel : this.vowels.toCharArray()) {
+            if (!word.contains("" + vowel)) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
