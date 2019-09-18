@@ -4,9 +4,9 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Collections;
 
-
-public class TextReader {
+public class TextReader  {
 private List<String> textList;
 private Scanner reader;
 private String vowels;
@@ -67,5 +67,11 @@ public List<String> palindromes() {
             }
         }
         return true;
+    }
+
+    public List<String> sortWordsAscending() {
+        List sortedList = this.textList;
+        Collections.sort(sortedList);
+        return sortedList;
     }
 }
