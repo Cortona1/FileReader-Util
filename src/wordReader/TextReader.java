@@ -74,4 +74,11 @@ public List<String> palindromes() {
         Collections.sort(sortedList);
         return sortedList;
     }
+
+    public List<String> sortWordsReverse() {
+        List reverseSorted = sortWordsAscending();
+        Collections.reverse(reverseSorted);
+        return reverseSorted;
+    }
+
 }
