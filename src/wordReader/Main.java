@@ -13,5 +13,6 @@ public class Main {
         System.out.println(test.palindromes());
         System.out.println(test.wordsContainingAllVowels());
         System.out.println(test.sortWordsAscending());
+        System.out.println(test.sortWordsReverse());
     }
 }
